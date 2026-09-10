@@ -11,10 +11,10 @@ class OrderPolicyTest {
 
     @ParameterizedTest(name = "{0} -> {1} is {2}")
     @CsvSource({
-            "DRAFT,   PAID,    ALLOWED",
-            "PAID,    SHIPPED, ALLOWED",
-            "DRAFT,   SHIPPED, FORBIDDEN",
-            "PAID,    DRAFT,   FORBIDDEN"
+            "DRAFT, PAID, ALLOWED",
+            "PAID, SHIPPED, ALLOWED",
+            "DRAFT, SHIPPED, FORBIDDEN",
+            "PAID, DRAFT, FORBIDDEN"
     })
     void readmeStatusTableMatchesPolicy(OrderStatus from, OrderStatus to, String expected) {
         if (expected.equals("ALLOWED")) {
