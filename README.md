@@ -21,7 +21,7 @@ the recipient.
 |-------|---------|-------------|--------------------------------------------------------------------------------------------------|
 | DRAFT | PAID    | Allowed  | The bank confirmed the payment - normal next step.                                              |
 | PAID  | SHIPPED | Allowed  | The money was forwarded to the recipient - normal next step.                                    |
-| DRAFT | SHIPPED | Forbidden | **Skipped payment.** We can't forward money to the recipient before the bank confirms it was paid — that would mean paying out with no funds and no commission collected. |
+| DRAFT | SHIPPED | Forbidden | **Skipped payment.** We can't forward money to the recipient before the bank confirms it was paid - that would mean paying out with no funds and no commission collected. |
 | PAID  | DRAFT   | Forbidden | **Reopen after pay.** Once a payment is confirmed and the commission is deducted, reverting it back to draft would break the financial records and accounting. |
 
 ## Forbidden - why
