@@ -1,4 +1,4 @@
-# Lab — Statuses of Your Product in Java 21
+# Lab - Statuses of Your Product in Java 21
 
 ## Product
 
@@ -19,12 +19,12 @@ the recipient.
 
 | From  | To      | Change      | Business reason (if forbidden)                                                                 |
 |-------|---------|-------------|--------------------------------------------------------------------------------------------------|
-| DRAFT | PAID    | ✅ Allowed  | The bank confirmed the payment — normal next step.                                              |
-| PAID  | SHIPPED | ✅ Allowed  | The money was forwarded to the recipient — normal next step.                                    |
-| DRAFT | SHIPPED | ❌ Forbidden | **Skipped payment.** We can't forward money to the recipient before the bank confirms it was paid — that would mean paying out with no funds and no commission collected. |
-| PAID  | DRAFT   | ❌ Forbidden | **Reopen after pay.** Once a payment is confirmed and the commission is deducted, reverting it back to draft would break the financial records and accounting. |
+| DRAFT | PAID    | Allowed  | The bank confirmed the payment — normal next step.                                              |
+| PAID  | SHIPPED | Allowed  | The money was forwarded to the recipient — normal next step.                                    |
+| DRAFT | SHIPPED | Forbidden | **Skipped payment.** We can't forward money to the recipient before the bank confirms it was paid — that would mean paying out with no funds and no commission collected. |
+| PAID  | DRAFT   | Forbidden | **Reopen after pay.** Once a payment is confirmed and the commission is deducted, reverting it back to draft would break the financial records and accounting. |
 
-## Forbidden — why
+## Forbidden - why
 
 Both forbidden rows protect the same rule: **an order can only move
 forward once the real-world financial commitment behind it (bank
